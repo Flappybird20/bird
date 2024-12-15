@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#world {
+    width: 800px;
+    height: 800px;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+#character {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: 50%;
+    left: 50px;
+    border-radius: 50%;
+}
+
+#block {
+    background-color: green;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    transition: right 0.1s linear;
+}
+
+#hole {
+    width: 100%;
+    height: 50px;
+    background-color: wheat;
+    position: absolute;
+    bottom: 350px;
+    left: 0px;
+    border-radius: 5px;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: black;
+}
