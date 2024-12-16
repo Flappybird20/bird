@@ -23,7 +23,7 @@ document.addEventListener("keydown", (event) => {
     character.style.bottom = y + 'px';
 });
 
-function applyGravity() {
+function Gravity() {
     y += gravity;
     if (y < 0) y = 0; 
     character.style.bottom = y + 'px';
@@ -59,7 +59,7 @@ function checkCollision() {
 }
 
 setInterval(() => {
-    applyGravity();
+    Gravity();
     moveObstacle();
     checkCollision();
 }, 20);
