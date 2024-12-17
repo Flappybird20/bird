@@ -9,17 +9,44 @@ let gravity = -5;
 let block_x = 800; 
 let score = 0;
 
+
 let Jump = true 
 
-document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowUp" && Jump == true) {
+
+document.addEventListener('click',gg)
+function gg() {
+    character.style.rotate =( 40 + 'deg')
+    if ( Jump == true) {
         y += speed;
+        
         Jump = false
         setTimeout((timeout) => {
             Jump = true
         }, 100);
     }
     if (y > 500) y = 500; 
+    character.style.bottom = y + 'px';
+
+ 
+
+    
+}  
+document.addEventListener ('keyup', asd=>{
+    character.style.rotate =( 30 + 'deg')
+} )
+
+
+document.addEventListener("keydown", (event) => {
+    character.style.rotate =( -30 + 'deg')
+   
+    if (event.key = ' '  && Jump == true) {
+        y += speed;
+        Jump = false
+        setTimeout((timeout) => {
+            Jump = true
+        }, 100);
+    }
+    if (y > 700) y = 700; 
     character.style.bottom = y + 'px';
 });
 
@@ -60,6 +87,10 @@ function checkCollision() {
 
 setInterval(() => {
     Gravity();
-    moveObstacle();
+
+
     checkCollision();
 }, 20);
+
+
+setInterval (moveObstacle, 20)
