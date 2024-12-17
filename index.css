@@ -18,21 +18,27 @@ body {
     position: relative;
     overflow: hidden;
     background-color: lightblue;
+ 
 }
 
 #character {
-    width: 30px;
+    width: 50px;
     height: 30px;
-    background-color: black;
+    background-color: bisque;
+  
     position: absolute;
     bottom: 50%;
     left: 50px;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+
+    z-index: 1;
 }
 
 #block {
     background-color: green;
-    width: 50px;
+    width: 20px;
     height: 100%;
     position: absolute;
     right: 0px;
@@ -41,8 +47,9 @@ body {
 
 #hole {
     width: 100%;
-    height: 50px;
-    background-color: wheat;
+    height: 250px;
+    background-color: lightblue;
+   
     position: absolute;
     bottom: 350px;
     left: 0px;
@@ -57,4 +64,14 @@ body {
     font-size: 24px;
     font-family: Arial, sans-serif;
     color: black;
+}
+#cloud{
+    width: 100px;
+    height: 50px;
+ background-color: aquamarine;
+    
+}
+#cloud img{
+    width: 100%;
+    height: 100%;
 }
